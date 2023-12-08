@@ -1,11 +1,8 @@
 <?php
 /**
  * Plugin Name:       DB-poster
-<<<<<<< HEAD
  * Plugin URI:        https:///
-=======
  * Plugin URI:        https://myexample.com
->>>>>>> 6343a4046daa7c96d5394758aefa492812dc9b7c
  * Description:       Submit posts with unique title from the front end using the WordPress REST API
  * Version:           1.0
  * Requires at least: 5.2
