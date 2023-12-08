@@ -34,25 +34,16 @@
 						postContent: postTextarea.value
 					},
 					beforeSend: function(xhr) {
-						// postTitleLabel.textContent = wma.checking
-						// required for permission callbak to work
 						xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
-
 					}
 				}).
 				done( function( data ) {
-					
-					// postTitleLabel.setAttribute("style","color:green")
 					postTitleLabel.textContent = wma.added_post;
 					postTitleField.value = '' ;
-					console.log(postTextarea.value);
 					postTextarea.value = '';
-					console.log(postTextarea.value);
 				})
 				.fail( function( data ) {
 					
-					// check if user has the capabilities to post or get 
-					console.log(data)
 					if ( data.status == '403') {
 						postTitleLabel.setAttribute("style","color:red;font-weight:bolder");	
 						postTitleLabel.textContent = wma.not_allowed
@@ -85,8 +76,6 @@
 					formSubmit.removeAttribute('disabled');
 				})
 				.fail(function( data ) {
-					
-					console.log(data)
 					postTitleLabel.setAttribute("style","color:red;font-weight:bolder");
 					if ( data.status == '404') {
 						postTitleLabel.textContent = wma.not_found
