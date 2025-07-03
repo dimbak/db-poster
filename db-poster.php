@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-add_action( 'init', '1dbposter_load_textdomain' );
+add_action( 'init', 'dbposter_load_textdomain' );
 
 function dbposter_load_textdomain() {
 	load_plugin_textdomain( 'db-poster', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
